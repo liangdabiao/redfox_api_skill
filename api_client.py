@@ -305,6 +305,21 @@ def business_failed(result) -> bool:
     return classify_result(result) == "error"
 
 
+def charge_note(result) -> str:
+    """Whether a no-data response cost points, taken from the live msg text.
+
+    Exit code 0 only means "not a failure", not "free": 3203 usually says the
+    points were not deducted, while 3801 has been seen to charge 0.600.
+    """
+    msg = str(result.get("msg") or result.get("message") or "") if isinstance(result, dict) else ""
+    if re.search(r"积分未扣除|未消耗积分|未扣除|不扣费", msg):
+        return "积分未扣除"
+    paid = re.search(r"已扣除\s*([\d.]+\s*积分)?", msg)
+    if paid:
+        return "已扣除 " + (paid.group(1) or "积分")
+    return "扣费情况见 msg"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Call a RedFoxHub API endpoint",
@@ -411,8 +426,9 @@ def main() -> int:
 
     kind = classify_result(result)
     if kind == "no_data":
-        print("RedFox code %s (no matching data, not a failure): %s"
-              % (result.get("code"), result.get("msg", "")), file=sys.stderr)
+        print("RedFox code %s (no matching data, not a failure; %s): %s"
+              % (result.get("code"), charge_note(result), result.get("msg", "")),
+              file=sys.stderr)
         return 0
     if kind == "error":
         if isinstance(result, dict) and result.get("error"):

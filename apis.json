@@ -1242,7 +1242,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/bili/data/accountWorkList\" \"page=1\""
+      "example_call": "python api_client.py POST \"/story/api/bili/data/accountWorkList\" \"mid=<mid>\" \"page=1\""
     },
     {
       "is_upload": false,
@@ -1280,7 +1280,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/bili/data/workDetail\""
+      "example_call": "python api_client.py POST \"/story/api/bili/data/workDetail\" \"bvId=<bvid>\""
     },
     {
       "is_upload": false,
@@ -2402,7 +2402,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/dyData/queryWorkList\" \"offset=0\""
+      "example_call": "python api_client.py POST \"/story/api/dyData/queryWorkList\" \"accountId=<account_id>\" \"offset=0\""
     },
     {
       "is_upload": false,
@@ -2485,7 +2485,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/dy/data/listWorkByAccount\" \"pageNum=1\" \"pageSize=10\""
+      "example_call": "python api_client.py POST \"/story/api/dy/data/listWorkByAccount\" \"userId=<user_id>\" \"pageNum=1\" \"pageSize=10\""
     },
     {
       "is_upload": false,
@@ -2561,7 +2561,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/dyData/queryWork\""
+      "example_call": "python api_client.py POST \"/story/api/dyData/queryWork\" \"workId=<work_id>\""
     },
     {
       "is_upload": false,
@@ -3022,7 +3022,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/fb/postComment\""
+      "example_call": "python api_client.py POST \"/story/api/fb/postComment\" \"url=<url>\""
     },
     {
       "is_upload": false,
@@ -3098,7 +3098,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/fb/userPosts\""
+      "example_call": "python api_client.py POST \"/story/api/fb/userPosts\" \"url=<url>\""
     },
     {
       "is_upload": false,
@@ -3635,7 +3635,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/ins/userInfo\""
+      "example_call": "python api_client.py POST \"/story/api/ins/userInfo\" \"username=<username>\""
     },
     {
       "is_upload": false,
@@ -3729,7 +3729,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/ksAllData/queryWorkList\" \"page=1\" \"size=20\""
+      "example_call": "python api_client.py POST \"/story/api/ksAllData/queryWorkList\" \"kwaiId=<kwai_id>\" \"page=1\" \"size=20\""
     },
     {
       "is_upload": false,
@@ -4078,7 +4078,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/tiktok/ability/userFollowing\" \"minTime=0\" \"pageToken=\""
+      "example_call": "python api_client.py POST \"/story/api/tiktok/ability/userFollowing\" \"userId=<user_id>\" \"minTime=0\" \"pageToken=\""
     },
     {
       "is_upload": false,
@@ -5305,7 +5305,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/x/userInfo\""
+      "example_call": "python api_client.py POST \"/story/api/x/userInfo\" \"screenName=<screen_name>\""
     },
     {
       "is_upload": false,
@@ -5352,7 +5352,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/x/userTimeline\""
+      "example_call": "python api_client.py POST \"/story/api/x/userTimeline\" \"screenName=<screen_name>\""
     },
     {
       "is_upload": false,
@@ -7388,7 +7388,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/xhsUser/queryWorkList\" \"offset=0\""
+      "example_call": "python api_client.py POST \"/story/api/xhsUser/queryWorkList\" \"redId=<red_id>\" \"offset=0\""
     },
     {
       "is_upload": false,
@@ -7464,7 +7464,7 @@
       ],
       "query_fields": [],
       "internal_fields": [],
-      "example_call": "python api_client.py POST \"/story/api/xhsUser/queryWorkDetail\""
+      "example_call": "python api_client.py POST \"/story/api/xhsUser/queryWorkDetail\" \"workId=<work_id>\""
     },
     {
       "is_upload": false,
