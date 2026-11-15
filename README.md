@@ -73,4 +73,4 @@ python api_client.py POST /story/api/dyData/searchUser "keyword=乐高"
 - 账号搜索是模糊匹配，中文复合词容易串到无关行业（实测搜「MOC设计师」返回的多是室内 / 服装设计师）；命中后按简介和作品再筛。
 - 批量做跨平台统计时，先确认字段路径再抽数：TikTok 结果用 `content` / `statsData` / `publishTime`，评论端点参数是 `aweme_id`；YouTube 给的是 `"19 hours ago"` 这类相对时间，要先换算。
 
-官方文档：https://redfox.hk/apis ｜ 状态码：https://redfox.hk/api-codes
+官方文档：https://redfox.hk/apis ｜ 状态码：https://redfox.hk/api-codes  - 感谢社区 https://linux.do
